@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Texas EDC Networking Reception | KACCNT</title>
+  <meta name="description" content="KACCNT North Texas EDC Networking Reception program, North Texas FDI Platform, and Texas Korean FDI Corridor Plan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a2040;
+      --navy2: #122f58;
+      --gold: #c9882b;
+      --gold-light: #f0b84a;
+      --gold-pale: #fdf4e7;
+      --teal: #0b7d74;
+      --green: #145c37;
+      --purple: #5b2fa0;
+      --ink: #1a2030;
+      --muted: #5c6878;
+      --muted2: #8a98aa;
+      --line: #dde4ed;
+      --soft: #f6f9fc;
+      --white: #ffffff;
+      --shadow-sm: 0 2px 8px rgba(10,32,64,.08);
+      --shadow-md: 0 8px 32px rgba(10,32,64,.12);
+      --shadow-lg: 0 20px 60px rgba(10,32,64,.18);
+      --radius-sm: 10px;
+      --radius: 18px;
+      --radius-lg: 28px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      margin: 0;
+      font-family: "DM Sans", "Noto Sans KR", -apple-system, sans-serif;
+      color: var(--ink);
+      background: #f4f7fb;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(221,228,237,.9);
+      box-shadow: 0 1px 12px rgba(10,32,64,.06);
+    }
+    .topbar-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 28px;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .seal {
+      width: 40px; height: 40px; flex: 0 0 auto;
+      border-radius: 50%;
+      background: conic-gradient(var(--navy) 0deg 180deg, #b91c1c 180deg 270deg, var(--navy) 270deg);
+      box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--navy);
+      position: relative;
+    }
+    .seal::after {
+      content: ""; position: absolute; inset: 4px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.5);
+    }
+    .brand-text { min-width: 0; }
+    .brand-title { font-weight: 700; color: var(--navy); font-size: 15px; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .brand-sub { font-size: 11px; color: var(--muted); letter-spacing: .02em; text-transform: uppercase; }
+    .lang-toggle {
+      display: flex; gap: 4px; padding: 4px;
+      border: 1.5px solid var(--line); border-radius: 999px;
+      background: var(--white);
+    }
+    .lang-toggle button {
+      border: 0; background: transparent; padding: 6px 16px; border-radius: 999px;
+      font-weight: 600; font-size: 13px; cursor: pointer; color: var(--muted);
+      font-family: inherit; transition: all .2s;
+    }
+    .lang-toggle button.active { background: var(--navy); color: #fff; }
+
+    /* ── LAYOUT ── */
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+    main { padding-bottom: 80px; }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: 20px;
+      padding: 28px 0 8px;
+    }
+    .hero-card {
+      position: relative; overflow: hidden;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(148deg, #0d2847 0%, #0a1e38 50%, #091629 100%);
+      color: white; padding: 48px 48px 44px;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-card::before {
+      content: ""; position: absolute;
+      top: -80px; right: -80px; width: 320px; height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,136,43,.25) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-card::after {
+      content: ""; position: absolute;
+      bottom: -60px; left: -60px; width: 260px; height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(11,125,116,.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-card-inner { position: relative; z-index: 1; }
+    .kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--gold-light); font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; font-size: 11px; margin-bottom: 20px;
+    }
+    .kicker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-light); }
+    h1 {
+      margin: 0 0 6px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5.5vw, 70px);
+      line-height: .92; letter-spacing: -.03em;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .hero-ko {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: clamp(18px, 2.5vw, 28px);
+      font-weight: 700; margin-top: 18px; opacity: .85;
+      line-height: 1.3;
+    }
+    .event-meta { display: grid; gap: 0; margin-top: 32px; }
+    .meta-line {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 0; border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .meta-icon {
+      width: 34px; height: 34px; flex: 0 0 auto;
+      border-radius: var(--radius-sm);
+      background: rgba(201,136,43,.18);
+      display: grid; place-items: center;
+      font-size: 15px;
+    }
+    .meta-content { flex: 1; min-width: 0; }
+    .meta-label { color: rgba(255,255,255,.45); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; }
+    .meta-value { font-size: 15px; font-weight: 600; line-height: 1.35; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      height: 44px; padding: 0 22px; border-radius: 12px;
+      border: 1.5px solid transparent; font-weight: 700; font-size: 13.5px;
+      cursor: pointer; font-family: inherit; letter-spacing: .01em;
+      transition: transform .18s, box-shadow .18s, opacity .18s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .btn-gold { background: var(--gold); color: #fff; border-color: var(--gold); }
+    .btn-outline { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.3); }
+
+    /* ── SIDE STACK ── */
+    .side-stack { display: grid; gap: 16px; }
+    .card {
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 26px 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .card-title {
+      display: flex; align-items: center; gap: 10px;
+      margin: 0 0 16px; color: var(--navy); font-size: 17px; font-weight: 700;
+    }
+    .card-title-bar { width: 4px; height: 20px; background: var(--gold); border-radius: 99px; flex: 0 0 auto; }
+
+    /* ── WELCOME ── */
+    .welcome p { margin: 0 0 12px; font-size: 15px; color: #3a4558; line-height: 1.7; }
+    .welcome p:last-child { margin-bottom: 0; }
+    .welcome-highlight {
+      margin-top: 16px; padding: 14px 18px;
+      border-left: 4px solid var(--gold); background: var(--gold-pale);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: #5c3c0a; font-weight: 600; font-size: 14px; line-height: 1.55;
+    }
+
+    /* ── SPEAKERS ── */
+    .speaker-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .speaker {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px; background: var(--soft); border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+    }
+    .avatar {
+      width: 52px; height: 52px; border-radius: 50%; flex: 0 0 auto;
+      overflow: hidden; border: 2px solid var(--line);
+      background: var(--line);
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .speaker-name { font-weight: 700; font-size: 13px; color: var(--navy); line-height: 1.3; }
+    .speaker-role { font-size: 11px; color: var(--muted); margin-top: 2px; line-height: 1.35; }
+    .speaker-korole { color: var(--teal); font-weight: 600; }
+
+    /* ── PROGRAM ── */
+    .program-list { display: grid; gap: 6px; margin-top: 16px; }
+    .program-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 13px 14px; border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      transition: background .15s, border-color .15s;
+    }
+    .program-item:hover { background: var(--soft); border-color: var(--line); }
+    .program-num {
+      width: 26px; height: 26px; flex: 0 0 auto;
+      border-radius: 50%; background: var(--navy); color: #fff;
+      display: grid; place-items: center;
+      font-size: 11px; font-weight: 800;
+    }
+    .program-main { font-weight: 600; font-size: 14.5px; color: var(--navy); margin-bottom: 3px; }
+    .program-note { font-size: 12.5px; color: var(--muted); line-height: 1.45; }
+
+    /* ── QUICK NAV ── */
+    .quick-nav {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
+      margin: 32px 0;
+    }
+    .nav-card {
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 20px 22px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      display: block;
+    }
+    .nav-card:hover {
+      transform: translateY(-3px); box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+    .nav-card b { display: block; font-size: 28px; font-weight: 900; color: var(--gold); font-family: "Playfair Display", serif; margin-bottom: 6px; line-height: 1; }
+    .nav-card strong { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .nav-card span { font-size: 11.5px; color: var(--muted); line-height: 1.4; display: block; }
+
+    /* ── CONTENT SECTION ── */
+    .content-section { padding: 20px 0 10px; }
+    .section-head {
+      margin-bottom: 24px; padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 800; text-transform: uppercase;
+      letter-spacing: .12em; color: var(--gold); margin-bottom: 10px;
+    }
+    .eyebrow::before { content: ""; display: inline-block; width: 18px; height: 2px; background: var(--gold); }
+    .section-head h2 {
+      margin: 0 0 14px; font-family: "Playfair Display", serif;
+      font-size: clamp(22px, 3vw, 32px); font-weight: 700;
+      color: var(--navy); letter-spacing: -.02em; line-height: 1.2;
+    }
+    .lead {
+      margin: 0; font-size: 15px; color: #3a4558; line-height: 1.75;
+      max-width: 820px;
+    }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .pill {
+      padding: 5px 14px; border-radius: 999px; font-size: 12px; font-weight: 700;
+      background: var(--navy); color: #fff; letter-spacing: .02em;
+    }
+
+    /* ── INFO CARDS ── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .info-card {
+      background: var(--white); border-radius: var(--radius); padding: 24px 26px;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--line);
+      border-top: 4px solid var(--line);
+    }
+    .info-card h3 { margin: 0 0 14px; font-size: 15px; font-weight: 700; color: var(--navy); }
+    .info-card.accent-blue { border-top-color: #2563eb; }
+    .info-card.accent-green { border-top-color: var(--teal); }
+    .info-card.accent-teal { border-top-color: var(--teal); }
+    .info-card.accent-purple { border-top-color: var(--purple); }
+    .info-card.accent-gray { border-top-color: var(--muted2); }
+    .info-card p { margin: 0; font-size: 14px; color: #3a4558; line-height: 1.7; }
+    .clean { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+    .clean li {
+      padding-left: 18px; position: relative; font-size: 14px;
+      color: #3a4558; line-height: 1.6;
+    }
+    .clean li::before { content: "·"; position: absolute; left: 4px; color: var(--gold); font-weight: 900; }
+
+    /* ── TABLE ── */
+    .axis-table {
+      width: 100%; border-collapse: collapse;
+      background: var(--white); border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--line);
+    }
+    .axis-table thead tr { background: var(--navy); }
+    .axis-table th {
+      padding: 14px 20px; text-align: left;
+      color: #fff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+    }
+    .axis-table td {
+      padding: 14px 20px; font-size: 14px; color: #3a4558;
+      border-top: 1px solid var(--line); line-height: 1.55;
+    }
+    .axis-table td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap; width: 160px; }
+    .axis-table tr:hover td { background: var(--soft); }
+
+    /* ── FLOW ── */
+    .flow { display: grid; gap: 12px; }
+    .step {
+      display: flex; gap: 18px; align-items: flex-start;
+      background: var(--white); border-radius: var(--radius);
+      padding: 22px 24px; box-shadow: var(--shadow-sm);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold);
+    }
+    .step-num {
+      width: 36px; height: 36px; flex: 0 0 auto;
+      background: var(--gold); color: #fff; border-radius: 50%;
+      display: grid; place-items: center;
+      font-weight: 900; font-size: 15px;
+    }
+    .step h3 { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: var(--navy); }
+    .step p { margin: 0; font-size: 14px; color: #3a4558; line-height: 1.65; }
+
+    /* ── MESSAGE TABLE ── */
+    .message-table {
+      display: grid; grid-template-columns: 160px 1fr;
+      background: var(--white); border-radius: var(--radius);
+      overflow: hidden; border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm); margin-bottom: 16px;
+    }
+    .message-table > div:nth-child(4n+1),
+    .message-table > div:nth-child(4n+3) {
+      background: var(--navy); color: #fff;
+      padding: 16px 18px; font-size: 13px; font-weight: 700;
+      display: flex; align-items: center;
+    }
+    .message-table > div:nth-child(4n+2),
+    .message-table > div:nth-child(4n+4) {
+      padding: 16px 20px; font-size: 14px; color: #3a4558; line-height: 1.65;
+      border-top: 1px solid var(--line);
+      display: flex; align-items: center;
+    }
+    .message-table > div:first-child { border-top: none; border-radius: var(--radius) 0 0 0; }
+    .message-table > div:nth-child(2) { border-top: none; border-radius: 0 var(--radius) 0 0; }
+
+    /* ── FINAL BOX ── */
+    .final-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      color: white; border-radius: var(--radius); padding: 28px 32px;
+      box-shadow: var(--shadow-md); margin-top: 16px;
+    }
+    .final-box h3 { margin: 0 0 12px; font-family: "Playfair Display", serif; font-size: 20px; color: var(--gold-light); }
+    .final-box p { margin: 0; font-size: 14.5px; line-height: 1.75; opacity: .88; }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center; padding: 48px 28px 40px;
+      border-top: 1px solid var(--line);
+      margin-top: 60px;
+      background: var(--white);
+    }
+    .footer-inner { max-width: 560px; margin: 0 auto; }
+    .footer-brand { margin-bottom: 12px; }
+    .footer-brand strong { display: block; font-size: 18px; font-weight: 800; color: var(--navy); letter-spacing: -.01em; }
+    .footer-brand span { font-size: 13px; color: var(--muted); }
+    .footer-note { font-size: 13px; color: var(--muted2); margin: 8px 0 28px; line-height: 1.6; }
+    .footer-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 20px; }
+    .footer-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      height: 46px; padding: 0 24px; border-radius: 13px;
+      font-weight: 700; font-size: 14px; font-family: inherit;
+      transition: transform .18s, box-shadow .18s;
+      text-decoration: none;
+    }
+    .footer-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .footer-btn-primary { background: var(--navy); color: #fff; }
+    .footer-btn-outline { background: var(--white); color: var(--navy); border: 1.5px solid var(--line); }
+    .footer-email { font-size: 12.5px; color: var(--muted2); }
+
+    /* ── LANGUAGE DISPLAY ── */
+    body:not(.en) [data-lang="en"] { display: none; }
+    body.en [data-lang="ko"] { display: none; }
+    body.en h3[data-lang] + h3[data-lang]:not([data-lang="en"]) { display: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .speaker-grid { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .quick-nav { grid-template-columns: repeat(2,1fr); }
+      .message-table { grid-template-columns: 1fr; }
+      .message-table > div { border-radius: 0 !important; }
+      .topbar-inner, .wrap { padding-left: 18px; padding-right: 18px; }
+      .hero-card { padding: 32px 28px 28px; }
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 36px !important; }
+      .quick-nav { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .axis-table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="seal"></div>
+        <div class="brand-text">
+          <div class="brand-title">KACCNT</div>
+          <div class="brand-sub">Korean-American Chamber · North Texas</div>
+        </div>
+      </div>
+      <div class="lang-toggle">
+        <button id="koBtn" onclick="setLang('ko')">한국어</button>
+        <button id="enBtn" onclick="setLang('en')">English</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <div class="kicker"><span class="kicker-dot"></span>KACCNT Official Event</div>
+            <h1>North<br/>Texas<br/>EDC</h1>
+            <div class="hero-ko" data-lang="ko">네트워킹 리셉션</div>
+            <div class="hero-ko" data-lang="en">Networking Reception</div>
+            <div class="event-meta">
+              <div class="meta-line">
+                <div class="meta-icon">📅</div>
+                <div class="meta-content">
+                  <div class="meta-label" data-lang="ko">일시</div>
+                  <div class="meta-label" data-lang="en">Date & Time</div>
+                  <div class="meta-value">June 8, 2026 · 6:30 PM</div>
+                </div>
+              </div>
+              <div class="meta-line">
+                <div class="meta-icon">📍</div>
+                <div class="meta-content">
+                  <div class="meta-label" data-lang="ko">장소</div>
+                  <div class="meta-label" data-lang="en">Venue</div>
+                  <div class="meta-value">SpringHill Suites Dallas Lewisville</div>
+                  <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:2px;">720 E Vista Ridge Mall Dr., Lewisville, TX 75067</div>
+                  <a href="https://www.google.com/maps/search/?api=1&query=720%20E%20Vista%20Ridge%20Mall%20Dr%2C%20Lewisville%2C%20TX%2075067" target="_blank" rel="noopener" style="font-size:12px;color:rgba(240,184,74,.85);text-decoration:underline;margin-top:4px;display:inline-block;">지도 열기 / Open Map ↗</a>
+                </div>
+              </div>
+              <div class="meta-line">
+                <div class="meta-icon">🏛</div>
+                <div class="meta-content">
+                  <div class="meta-label" data-lang="ko">주최</div>
+                  <div class="meta-label" data-lang="en">Hosted by</div>
+                  <div class="meta-value">Korean American Chamber of Commerce of North Texas (KACCNT)</div>
+                </div>
+              </div>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-gold" href="#platform" data-lang="ko">📋 FDI Platform 보기</a>
+              <a class="btn btn-gold" href="#platform" data-lang="en">📋 View FDI Platform</a>
+              <a class="btn btn-outline" href="#flow" data-lang="ko">진행 순서</a>
+              <a class="btn btn-outline" href="#flow" data-lang="en">Program Flow</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-stack">
+          <!-- Welcome card -->
+          <div class="card">
+            <div class="card-title">
+              <div class="card-title-bar"></div>
+              <span data-lang="ko">환영 인사</span>
+              <span data-lang="en">Welcome</span>
+            </div>
+            <div class="welcome">
+              <p data-lang="ko">북텍사스한인상공회의소는 한국 기업, North Texas 도시 및 EDC, 지역 기관, 대학, 인력·실행 자원이 서로 연결될 수 있는 실무형 경제협력 플랫폼을 준비하고 있습니다.</p>
+              <p data-lang="en">The Korean American Chamber of Commerce of North Texas is preparing a practical economic cooperation platform connecting Korean companies with North Texas cities, EDCs, institutions, universities, workforce partners, and local execution resources.</p>
+              <div class="welcome-highlight" data-lang="ko">오늘 리셉션은 단순한 네트워킹을 넘어, 기업과 도시가 직접 대화하고 후속 실행으로 이어질 수 있는 North Texas FDI Platform과 Texas Korean FDI Corridor의 출발점입니다.</div>
+              <div class="welcome-highlight" data-lang="en">This reception is designed not only for networking, but also as a starting point for the North Texas FDI Platform and the Texas Korean FDI Corridor—helping companies and cities move into direct conversations and practical follow-up execution.</div>
+            </div>
+          </div>
+
+          <!-- Speakers -->
+          <div class="card">
+            <div class="card-title">
+              <div class="card-title-bar"></div>
+              <span data-lang="ko">주요 연사</span>
+              <span data-lang="en">Featured Speakers</span>
+            </div>
+            <div class="speaker-grid">
+              <div class="speaker">
+                <div class="avatar"><img src="data:image/jpeg;base64,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" alt="Steve Babick" /></div>
+                <div>
+                  <div class="speaker-name" data-lang="ko">스티브 바빅 / Steve Babick</div>
+                  <div class="speaker-name" data-lang="en">Steve Babick</div>
+                  <div class="speaker-role" data-lang="ko"><span class="speaker-korole">캐롤튼시 시장</span></div>
+                  <div class="speaker-role" data-lang="en">Mayor of Carrollton</div>
+                </div>
+              </div>
+              <div class="speaker">
+                <div class="avatar"><img src="data:image/jpeg;base64,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" alt="Kwangheon DOH" /></div>
+                <div>
+                  <div class="speaker-name" data-lang="ko">도광헌 / Kwangheon DOH</div>
+                  <div class="speaker-name" data-lang="en">Kwangheon DOH</div>
+                  <div class="speaker-role" data-lang="ko"><span class="speaker-korole">주달라스 출장소장</span></div>
+                  <div class="speaker-role" data-lang="en">Head of Consulate of the Republic of Korea in Dallas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program -->
+          <div class="card" id="program">
+            <div class="card-title">
+              <div class="card-title-bar"></div>
+              <span data-lang="ko">행사 순서</span>
+              <span data-lang="en">Program</span>
+            </div>
+            <div class="program-list">
+              <div class="program-item">
+                <div class="program-num">1</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">만찬 및 리셉션</span><span data-lang="en">Dinner &amp; Reception</span></div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">2</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">개회사</span><span data-lang="en">Opening Remarks</span></div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">3</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">주요 내빈 소개</span><span data-lang="en">Distinguished Guests</span></div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">4</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">환영사</span><span data-lang="en">Welcome Remarks</span></div>
+                  <div class="program-note" data-lang="ko">신동헌 회장, 북텍사스 상공회의소</div>
+                  <div class="program-note" data-lang="en">Daniel Shin, President, KACCNT</div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">5</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">축사</span><span data-lang="en">Congratulatory Remarks</span></div>
+                  <div class="program-note" data-lang="ko">스티브 바빅 캐롤튼 시장 · 도광헌 주달라스 출장소장</div>
+                  <div class="program-note" data-lang="en">Mayor Steve Babick · Kwangheon DOH, Head of Consulate Dallas</div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">6</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">전달식</span><span data-lang="en">Letter of Support Presentation</span></div>
+                  <div class="program-note">Carrollton to K-Midsouth Nexus</div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">7</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">감사 인사 및 답사</span><span data-lang="en">Appreciation &amp; Guest Response</span></div>
+                  <div class="program-note" data-lang="ko">정영호 전 휴스턴 총영사</div>
+                  <div class="program-note" data-lang="en">Jung, Young Ho, Former Consul General, Houston</div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">8</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">참가 도시 및 회사 소개</span><span data-lang="en">Participant Introductions</span></div>
+                  <div class="program-note" data-lang="ko">한국 산업 대표단 · 참가 도시/EDC · FDI Platform</div>
+                  <div class="program-note" data-lang="en">Korean Industrial Delegation · Cities/EDCs · FDI Platform</div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">9</div>
+                <div>
+                  <div class="program-main"><span data-lang="ko">텍사스 진출 실행 절차</span><span data-lang="en">Texas Local Execution Navigator</span></div>
+                  <div class="program-note">Beacon Projects</div>
+                </div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">10</div>
+                <div><div class="program-main"><span data-lang="ko">단체 사진</span><span data-lang="en">Group Photo</span></div></div>
+              </div>
+              <div class="program-item">
+                <div class="program-num">11</div>
+                <div><div class="program-main"><span data-lang="ko">자유 네트워킹</span><span data-lang="en">Open Networking</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK NAV -->
+      <nav class="quick-nav" aria-label="Section navigation">
+        <a class="nav-card" href="#platform">
+          <b>01</b>
+          <strong>FDI Platform</strong>
+          <span data-lang="ko">기업-도시 연결 구조</span>
+          <span data-lang="en">Company-to-city pathway</span>
+        </a>
+        <a class="nav-card" href="#principle">
+          <b>02</b>
+          <strong>Neutral Connector</strong>
+          <span data-lang="ko">중립적 연결자 원칙</span>
+          <span data-lang="en">Clear role boundaries</span>
+        </a>
+        <a class="nav-card" href="#corridor">
+          <b>03</b>
+          <strong>Corridor Plan</strong>
+          <span data-lang="ko">North Texas·Austin·Houston·Korea</span>
+          <span data-lang="en">Regional industrial axes</span>
+        </a>
+        <a class="nav-card" href="#flow">
+          <b>04</b>
+          <strong>Operating Flow</strong>
+          <span data-lang="ko">후속 실행 절차</span>
+          <span data-lang="en">Execution steps</span>
+        </a>
+      </nav>
+
+      <!-- SECTION 1: PLATFORM -->
+      <section class="content-section" id="platform">
+        <div class="section-head">
+          <div class="eyebrow">1. Platform</div>
+          <h2>North Texas FDI Platform</h2>
+          <p class="lead" data-lang="ko">한국 기업이 텍사스 진출을 검토할 때 가장 어려운 부분은 "어느 도시와, 어떤 기관과, 어떤 절차로 시작해야 하는가"입니다. Platform은 이 초기 혼선을 줄이고 기업과 도시가 더 준비된 상태에서 만날 수 있도록 돕습니다.</p>
+          <p class="lead" data-lang="en">When Korean companies evaluate Texas, one of the hardest early questions is who to talk to first and how to begin. The Platform reduces early uncertainty and helps companies and cities meet in a more prepared and practical way.</p>
+        </div>
+        <div class="grid-2">
+          <div class="info-card accent-blue">
+            <h3 data-lang="ko">주요 역할</h3>
+            <h3 data-lang="en">Core Role</h3>
+            <ul class="clean" data-lang="ko">
+              <li>기업의 업종, 제품, 투자 규모, 부지, 인력, 인허가, 일정, 후속 필요사항을 정리합니다.</li>
+              <li>도시/EDC의 산업 특성과 기업의 니즈를 맞춰 더 적합한 연결을 만듭니다.</li>
+              <li>대학, 인력기관, 현지 기업, 공급망, 전문 실행 자원과의 연결 가능성을 정리합니다.</li>
+              <li>첫 만남 이후 자료 공유, 후속 미팅, 프로젝트 검토로 이어질 수 있도록 돕습니다.</li>
+            </ul>
+            <ul class="clean" data-lang="en">
+              <li>Organize sector, product, investment scale, site needs, workforce, permitting, timeline, and follow-up needs.</li>
+              <li>Match company needs with the strengths of cities, EDCs, universities, and local networks.</li>
+              <li>Connect companies to public, institutional, and private-sector resources without replacing any party's role.</li>
+              <li>Move first introductions into follow-up meetings, document sharing, and project review.</li>
+            </ul>
+          </div>
+          <div class="info-card accent-green">
+            <h3 data-lang="ko">대상 기업</h3>
+            <h3 data-lang="en">Who It Supports</h3>
+            <ul class="clean" data-lang="ko">
+              <li>미국 시장 진출을 검토하는 한국 기업</li>
+              <li>이미 텍사스에 진출했지만 추가 부지, 인력, 공급망, 고객, 현지 파트너가 필요한 기업</li>
+              <li>North Texas 기업 중 Austin 반도체/첨단제조 생태계 또는 한국 시장과 연결 가능성이 있는 기업</li>
+            </ul>
+            <ul class="clean" data-lang="en">
+              <li>Korean companies evaluating U.S. or Texas market entry.</li>
+              <li>Korean companies in Texas needing expansion support, vendors, workforce, or a second site.</li>
+              <li>North Texas companies that may connect with the Austin advanced manufacturing ecosystem or the Korean market.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: PRINCIPLE -->
+      <section class="content-section" id="principle">
+        <div class="section-head">
+          <div class="eyebrow">2. Principle</div>
+          <h2 data-lang="ko">중립적 연결자 원칙</h2>
+          <h2 data-lang="en">Neutral Connector Principle</h2>
+          <p class="lead" data-lang="ko">상공회의소는 기업을 대신해 도시와 협상하거나, 인센티브·부지·계약 조건을 대리하지 않습니다. 역할은 기업과 도시/EDC가 서로를 더 잘 이해하고 직접 대화할 수 있도록 연결 구조를 만드는 것입니다.</p>
+          <p class="lead" data-lang="en">The Chamber does not negotiate with cities on behalf of companies and does not represent either side in incentives, site terms, or contracts. Its role is to organize a trusted path so companies and cities can understand each other and speak directly.</p>
+        </div>
+        <div class="grid-2">
+          <div class="info-card accent-teal">
+            <h3 data-lang="ko">상공회의소가 하는 일</h3>
+            <h3 data-lang="en">What the Chamber Does</h3>
+            <ul class="clean" data-lang="ko">
+              <li>기업의 기본 정보와 관심 분야를 정리합니다.</li>
+              <li>도시/EDC 및 기관과의 첫 연결을 돕습니다.</li>
+              <li>산업 적합성에 따라 대화가 이어지도록 구조화합니다.</li>
+              <li>필요할 때 자격 있는 현지 실행 자원을 안내합니다.</li>
+            </ul>
+            <ul class="clean" data-lang="en">
+              <li>Organizes basic company information and interests.</li>
+              <li>Helps identify relevant cities, EDCs, institutions, and contacts.</li>
+              <li>Supports industry-fit conversations and meeting coordination.</li>
+              <li>When needed, guides companies toward qualified local execution resources.</li>
+            </ul>
+          </div>
+          <div class="info-card accent-gray">
+            <h3 data-lang="ko">상공회의소가 하지 않는 일</h3>
+            <h3 data-lang="en">What the Chamber Does Not Do</h3>
+            <ul class="clean" data-lang="ko">
+              <li>특정 도시를 우선하거나 배제하지 않습니다.</li>
+              <li>기업을 대신해 인센티브, 부지, 계약 조건을 협상하지 않습니다.</li>
+              <li>공식 승인, 인허가, 투자 결과를 보장하지 않습니다.</li>
+              <li>브로커나 에이전트로 활동하지 않습니다.</li>
+            </ul>
+            <ul class="clean" data-lang="en">
+              <li>Does not favor or exclude any city.</li>
+              <li>Does not negotiate incentive, site, or contract terms.</li>
+              <li>Does not guarantee approvals, permits, or business outcomes.</li>
+              <li>Does not operate as a broker or procurement representative.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: CORRIDOR -->
+      <section class="content-section" id="corridor">
+        <div class="section-head">
+          <div class="eyebrow">3. Corridor Plan</div>
+          <h2>Texas Korean FDI Corridor</h2>
+          <p class="lead" data-lang="ko">Corridor는 Platform의 후속 구조입니다. 기업이 텍사스에 들어오는 단계에서 끝나는 것이 아니라, 정착, 운영 안정화, 공급망, 물류, 인력, 지역 비즈니스 연결까지 이어지도록 돕는 텍사스-한국 산업 협력 라인입니다.</p>
+          <p class="lead" data-lang="en">The Corridor is the follow-up structure beyond initial entry. It helps Korean companies and Texas regional partners move from market interest into stabilization, supply chain connection, logistics, workforce, and long-term cooperation.</p>
+          <div class="pill-row">
+            <span class="pill">North Texas</span>
+            <span class="pill">Austin / Taylor</span>
+            <span class="pill">Houston Region</span>
+            <span class="pill">Korea / Gyeonggi</span>
+          </div>
+        </div>
+        <table class="axis-table" aria-label="Corridor axis connection focus">
+          <thead><tr><th>Axis</th><th>Connection Focus</th></tr></thead>
+          <tbody data-lang="ko">
+            <tr><td>North Texas</td><td>도시/EDC, 물류, 제조, 부동산, 전문서비스, 한인 비즈니스 네트워크, 대학 및 인력 자원</td></tr>
+            <tr><td>Austin / Taylor</td><td>반도체, 첨단제조, 기술기업, 공급업체 생태계, 운영 수요 파악</td></tr>
+            <tr><td>Houston Region</td><td>항만, 물류, 에너지, 석유화학, 제조, 수출입, 산업서비스, 특수/화학물류</td></tr>
+            <tr><td>Korea / Gyeonggi</td><td>기업 방문단, 산업기관, 바이어/파트너 네트워크, 한국 시장 연결</td></tr>
+          </tbody>
+          <tbody data-lang="en">
+            <tr><td>North Texas</td><td>Cities/EDCs, logistics, manufacturing, real estate, professional services, Korean business networks, universities, and workforce resources.</td></tr>
+            <tr><td>Austin / Taylor</td><td>Semiconductor, advanced manufacturing, technology companies, supplier ecosystem, and demand-side industry needs.</td></tr>
+            <tr><td>Houston Region</td><td>Port logistics, energy, petrochemicals, manufacturing, import/export, industrial services, specialty and chemical logistics.</td></tr>
+            <tr><td>Korea / Gyeonggi</td><td>Business delegations, institutions, industry groups, buyer/partner networks, and Korea market access.</td></tr>
+          </tbody>
+        </table>
+        <div class="info-card accent-purple" style="margin-top:16px">
+          <h3 data-lang="ko">핵심 방향</h3>
+          <h3 data-lang="en">Core Direction</h3>
+          <p data-lang="ko">각 지역은 경쟁 구조가 아니라 서로 다른 산업 기능을 가진 협력 축입니다. 기업의 업종과 목적에 따라 가장 적합한 도시, 기관, 시장, 실행 자원으로 연결합니다.</p>
+          <p data-lang="en">The regions are not competing lanes. They are complementary industrial axes connected based on each company's sector, purpose, and practical needs.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 4: TWO-WAY -->
+      <section class="content-section" id="twoway">
+        <div class="section-head">
+          <div class="eyebrow">4. Two-Way Model</div>
+          <h2 data-lang="ko">양방향 플랫폼으로 확장</h2>
+          <h2 data-lang="en">A Bi-Directional Platform</h2>
+          <p class="lead" data-lang="ko">이 구조는 한국 기업을 텍사스로 데려오는 한 방향 모델만이 아닙니다. 한국 기업의 텍사스 진출과 텍사스/미국 기업의 한국 연결을 함께 준비하는 양방향 협력 모델입니다.</p>
+          <p class="lead" data-lang="en">This is not a one-way model. It is a two-way cooperation structure for Korean companies entering Texas and Texas/U.S. companies connecting to Korea.</p>
+        </div>
+        <div class="grid-2">
+          <div class="info-card accent-blue">
+            <h3>Korea → Texas</h3>
+            <ul class="clean" data-lang="ko">
+              <li>한국 기업을 North Texas 도시, EDC, 부지, 인허가, 인력, 파트너로 연결합니다.</li>
+              <li>필요에 따라 Austin 반도체/첨단제조 생태계와 Houston 물류·에너지·산업 생태계로 확장합니다.</li>
+              <li>미국 시장 진출 초기의 정보 격차와 관계 형성 부담을 줄입니다.</li>
+            </ul>
+            <ul class="clean" data-lang="en">
+              <li>Connect Korean companies to North Texas cities, EDCs, sites, workforce resources, and partners.</li>
+              <li>When appropriate, extend into the Austin advanced manufacturing and Houston logistics ecosystems.</li>
+              <li>Reduce early information gaps and relationship barriers for market entry.</li>
+            </ul>
+          </div>
+          <div class="info-card accent-green">
+            <h3>Texas / U.S. → Korea</h3>
+            <ul class="clean" data-lang="ko">
+              <li>North Texas 및 미국 기업이 한국 시장, 경기도 및 관련 기관, 산업 네트워크와 연결될 수 있도록 준비합니다.</li>
+              <li>무역, 투자, 기술, 인력, 공동 프로젝트, 바이어/파트너 발굴로 확장합니다.</li>
+              <li>일회성 행사가 아니라 반복 가능한 기관 간 협력 구조를 만듭니다.</li>
+            </ul>
+            <ul class="clean" data-lang="en">
+              <li>Prepare pathways for North Texas and U.S. companies to connect with Korea's market and Gyeonggi-do institutions.</li>
+              <li>Expand into trade, investment, technology, workforce, and buyer/partner connections.</li>
+              <li>Build a repeatable institutional cooperation model, not a one-time event.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: FLOW -->
+      <section class="content-section" id="flow">
+        <div class="section-head">
+          <div class="eyebrow">5. How It Works</div>
+          <h2 data-lang="ko">어떻게 작동하나</h2>
+          <h2 data-lang="en">Operating Flow</h2>
+        </div>
+        <div class="flow">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3 data-lang="ko">산업군과 니즈 파악</h3>
+              <h3 data-lang="en">Identify Industry Fit</h3>
+              <p data-lang="ko">기업의 업종, 제품, 고객, 투자 규모, 부지, 인력, 인증, 일정, 시장진출 목표를 정리합니다.</p>
+              <p data-lang="en">Clarify the company's sector, product, customers, investment scale, site needs, workforce needs, certifications, timeline, and market-entry goals.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3 data-lang="ko">도시/기관 매칭</h3>
+              <h3 data-lang="en">Match Cities and Institutions</h3>
+              <p data-lang="ko">도시/EDC의 산업 특화군, 부지, 인력, 인프라, 시장 접근성에 맞춰 적합한 연결을 만듭니다.</p>
+              <p data-lang="en">Align company needs with city/EDC industry strengths, sites, workforce, infrastructure, and market access.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3 data-lang="ko">직접 대화 연결</h3>
+              <h3 data-lang="en">Support Direct Conversations</h3>
+              <p data-lang="ko">기업과 도시/EDC가 직접 논의할 수 있도록 미팅, 프로젝트 요약, 자료 공유, 후속 질문을 구조화합니다.</p>
+              <p data-lang="en">Prepare introductions, project briefs, materials, and meetings so companies and cities/EDCs can speak directly.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div>
+              <h3 data-lang="ko">실행 자원 연결</h3>
+              <h3 data-lang="en">Connect Execution Resources</h3>
+              <p data-lang="ko">필요 시 컨설팅/자문, 부동산, 법률, 세무, 회계, 금융, 부지검토, 인허가, 설계, 건축/시공, 물류, 인력 등 자격 있는 실행 파트너로 연결합니다.</p>
+              <p data-lang="en">When needed, connect companies to qualified execution partners including consulting, real estate, legal, tax, accounting, finance, site review, permitting, design, construction, logistics, and workforce.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div>
+              <h3 data-lang="ko">Corridor 확장</h3>
+              <h3 data-lang="en">Expand Through the Corridor</h3>
+              <p data-lang="ko">North Texas에서 시작된 대화를 Austin, Houston, 한국 및 경기도 기관, 바이어/파트너 네트워크로 확장합니다.</p>
+              <p data-lang="en">Extend conversations from North Texas into Austin, Houston, Korea, Gyeonggi-do institutions, and buyer/partner networks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: MESSAGE -->
+      <section class="content-section" id="message">
+        <div class="section-head">
+          <div class="eyebrow">6. Shared Message</div>
+          <h2 data-lang="ko">도시와 기관에 전달할 메시지</h2>
+          <h2 data-lang="en">Message to Cities and Institutions</h2>
+        </div>
+        <div class="message-table" data-lang="ko">
+          <div>도시/EDC에게</div>
+          <div>더 적합한 한국 기업을 만나고, 산업군별로 효율적인 후속 협의를 만들 수 있습니다.</div>
+          <div>한국 기업에게</div>
+          <div>어디서부터 시작해야 하는지 모르는 초기 어려움을 줄이고, 도시/부지/인허가/인력/파트너를 한 흐름으로 만날 수 있습니다.</div>
+          <div>텍사스/미국 기업에게</div>
+          <div>필요에 따라 Austin 생태계와 한국 시장 및 기관 네트워크까지 연결 가능성을 넓힐 수 있습니다.</div>
+          <div>한국 기관에게</div>
+          <div>한국 기업의 미국 진출과 미국 기업의 한국 연결을 함께 지원하는 양방향 협력 모델을 만들 수 있습니다.</div>
+        </div>
+        <div class="message-table" data-lang="en">
+          <div>For cities/EDCs</div>
+          <div>Meet better-matched Korean companies and create more efficient industry-specific follow-up.</div>
+          <div>For Korean companies</div>
+          <div>Reduce early uncertainty and access city contacts, sites, permitting guidance, workforce resources, and partners in one pathway.</div>
+          <div>For Texas/U.S. companies</div>
+          <div>When appropriate, extend connections into the Austin ecosystem and Korea's market and institutional networks.</div>
+          <div>For Korean institutions</div>
+          <div>Build a two-way cooperation model that supports Korean companies entering the U.S. and U.S. companies connecting to Korea.</div>
+        </div>
+        <div class="final-box">
+          <h3 data-lang="ko">최종 정리</h3>
+          <h3 data-lang="en">Final Summary</h3>
+          <p data-lang="ko">North Texas FDI Platform은 현장 연결과 후속 실행을 돕는 구조이고, Texas Korean FDI Corridor는 그 기반을 지역 간 산업 연결과 양방향 성장으로 확장하는 구조입니다. 상공회의소는 협상 대리자가 아니라 중립적인 연결자입니다.</p>
+          <p data-lang="en">The North Texas FDI Platform supports practical connection and follow-up. The Texas Korean FDI Corridor expands that foundation into regional industry connection and two-way growth. The Chamber remains a neutral connector, not a negotiation representative.</p>
+        </div>
+      </section>
+
+    </div><!-- /.wrap -->
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>KACCNT</strong>
+        <span>Korean American Chamber of Commerce of North Texas</span>
+      </div>
+      <p class="footer-note" data-lang="ko">행사장에서 QR 코드를 통해 본 페이지를 열람할 수 있도록 제작된 디지털 프로그램 페이지입니다.</p>
+      <p class="footer-note" data-lang="en">Digital program page prepared for event QR access.</p>
+      <div class="footer-btns">
+        <a class="footer-btn footer-btn-primary" href="https://www.koreanchamber.org" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span data-lang="ko">KACCNT 웹사이트 바로가기</span>
+          <span data-lang="en">Learn more about KACCNT</span>
+        </a>
+        <a class="footer-btn footer-btn-outline" href="mailto:staff@koreanchamber.org?subject=Inquiry%20via%20North%20Texas%20EDC%20Reception&body=Hello%2C%0A%0AI%20am%20reaching%20out%20regarding%20the%20North%20Texas%20EDC%20Networking%20Reception%20hosted%20by%20KACCNT.%0A%0A%5BPlease%20write%20your%20message%20here%5D%0A%0AThank%20you.">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span data-lang="ko">문의 남기기</span>
+          <span data-lang="en">Contact Us</span>
+        </a>
+      </div>
+      <div class="footer-email">staff@koreanchamber.org</div>
+    </div>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.classList.toggle('en', lang === 'en');
+      document.documentElement.lang = lang === 'en' ? 'en' : 'ko';
+      document.getElementById('koBtn').classList.toggle('active', lang === 'ko');
+      document.getElementById('enBtn').classList.toggle('active', lang === 'en');
+      try { localStorage.setItem('kaccntLang', lang); } catch(e) {}
+    }
+    (function() {
+      const saved = (localStorage.getItem('kaccntLang') || '').toLowerCase();
+      const browser = (navigator.language || '').toLowerCase().startsWith('en') ? 'en' : 'ko';
+      setLang(saved === 'en' || saved === 'ko' ? saved : browser);
+    })();
+  </script>
+</body>
+</html>
